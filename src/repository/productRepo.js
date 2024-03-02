@@ -1,6 +1,7 @@
 import productModel from "../models/productModel.js"
 
 
+// Add new product with name & quantity in Database
 export const addProduct = async (name, quantity)=>{
 
     try{
@@ -13,6 +14,7 @@ export const addProduct = async (name, quantity)=>{
     }
 }
 
+// Get all product from Database
 export const getProducts = async ()=>{
 
     try{
@@ -23,6 +25,7 @@ export const getProducts = async ()=>{
     }
 }
 
+// Delete a product from Database by product ID
 export const deleteProductRepo = async (id)=>{
 
     try{
@@ -33,6 +36,7 @@ export const deleteProductRepo = async (id)=>{
     }
 }
 
+// Update a product quantity in Database by product ID 
 export const updateProductRepo = async (id, number)=>{
 
     try{

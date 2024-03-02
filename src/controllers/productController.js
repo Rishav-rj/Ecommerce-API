@@ -3,6 +3,8 @@ import { addProduct, deleteProductRepo, getProducts, updateProductRepo } from ".
 
 export default class ProductController {
 
+    // Add new product by  name & quantity
+
     createProduct = async(req, res)=>{
         try{
             const {name, quantity} = req.body;
@@ -15,6 +17,8 @@ export default class ProductController {
             throw new Error("Something went wrong while adding new product")
         }
     }
+
+    // Get all products
 
     getAllProducts = async(req, res)=>{
         try{
@@ -29,6 +33,8 @@ export default class ProductController {
         }
     }
 
+    // Delete a product by product ID
+
     deleteProduct = async(req, res)=>{
         try{
             const {id} = req.params
@@ -42,6 +48,8 @@ export default class ProductController {
             throw new Error("Something went wrong while deleting product")
         }
     }
+
+    // Update a product quantity by ID & query parameter(number) 
 
     updateProduct = async(req, res)=>{
         try{
