@@ -13,7 +13,7 @@ app.use("/products", productRoute)
 
 // Wrong URL
 app.use("*", (req, res)=>{
-    res.status(404).send("Page not found!")
+    res.status(404).send({msg:"Page not found! Please use https://ecommerce-api-oub8.onrender.com/products"})
 })
 
 export default app;
